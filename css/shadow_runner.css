@@ -1,0 +1,692 @@
+@font-face {
+  font-family: "Shadow Gothic";
+  src: url("../fonts/Shadow W90 Gothic.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+}
+
+@font-face {
+  font-family: "Staubach";
+  src: url("../fonts/Staubach.ttf");
+}
+
+@font-face {
+  font-family: "Do Hyeon";
+  src: url("../fonts/DoHyeon-Regular.ttf");
+}
+
+:root {
+  --staubach: "Staubach", sans-serif;
+  --montserrat: "Montserrat", sans-serif;
+}
+
+html,
+body {
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: var(--staubach);
+}
+
+.scrolled {
+  background-color: #00062f !important;
+  -webkit-transition: background-color 500ms linear !important;
+  transition: background-color 500ms linear !important;
+}
+
+.unscrolled {
+  background: none;
+  -webkit-transition: background 500ms linear !important;
+  transition: background 500ms linear !important;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  padding: 0 5vw;
+}
+
+a {
+  text-decoration: none;
+}
+
+.flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+ul {
+  list-style: none;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.collapse {
+  height: 17rem !important;
+}
+
+header .nav {
+  background: var(--black);
+  height: 2rem;
+  min-height: 5rem;
+  -webkit-transition: height 0.2s ease-in-out;
+  transition: height 0.2s ease-in-out;
+  color: white;
+  position: fixed;
+  width: 100vw;
+  overflow: hidden;
+  font-family: var(--staubach);
+}
+
+header .nav .nav-menu {
+  margin: 0 5vw;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .nav .nav-menu .nav-brand {
+  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .nav .nav-menu .nav-brand a {
+  color: white;
+  position: relative;
+}
+
+header .nav .nav-menu .toggle-collapse {
+  position: absolute;
+  right: 10%;
+  display: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+header .nav .nav-menu .toggle-collapse .toggle-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .nav .nav-menu .toggle-collapse .toggle-icons a {
+  color: white;
+}
+
+header .nav .nav-menu .nav-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+header .nav .nav-menu .nav-items .nav-link {
+  -webkit-transition: 0.1s ease-in-out all;
+  transition: 0.1s ease-in-out all;
+  padding: 0.3rem 2rem;
+}
+
+header .nav .nav-menu .nav-items .nav-link a {
+  font-size: 1.4rem;
+  color: white;
+  position: relative;
+}
+
+header .nav .nav-menu .nav-items .nav-link a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+header .nav .nav-menu .nav-items .nav-link .btn {
+  color: #000547;
+  padding: 0.5rem 1rem;
+  background-color: white;
+}
+
+header .nav .nav-menu .nav-items .nav-link a::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+header .nav .nav-menu .nav-items .nav-link:hover a:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+header .nav .nav-menu .nav-items .hover {
+  -webkit-transition: 0.1s ease-in-out all;
+  transition: 0.1s ease-in-out all;
+}
+
+header .nav .nav-menu .nav-items .hover:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+main {
+  background-color: #00062f;
+}
+
+main .landing {
+  background-image: url("../assets/space website/jupiter.jpg");
+  background-size: 100% 100%;
+  min-height: 100vh;
+}
+
+main .landing .landing-content {
+  max-width: 1140px;
+  min-height: 100vh;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /*animated scroll arrow animation*/
+}
+
+main .landing .landing-content .heading h1 {
+  color: #000547;
+  font-family: "Shadow Gothic", sans-serif;
+  font-size: 7rem;
+  letter-spacing: 8px;
+}
+
+main .landing .landing-content .subtitle h2 {
+  color: #000547;
+  font-size: 3rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+main .landing .landing-content .buttons {
+  width: 60%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .landing .landing-content .buttons .demo {
+  color: #000547;
+  font-size: 2rem;
+  padding: 5px 40px;
+  background-color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  border: 4px solid #000547;
+}
+
+main .landing .landing-content .buttons .demo .anchor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .landing .landing-content .buttons .pre-order {
+  color: #000547;
+  font-size: 2rem;
+  padding: 5px 20px;
+  background-color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  border: 4px solid #000547;
+}
+
+main .landing .landing-content .buttons .pre-order .anchor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .landing .landing-content .scroll-down {
+  margin-top: 4rem;
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  z-index: 100;
+  text-decoration: none;
+  text-shadow: 0;
+  width: 13px;
+  height: 13px;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  z-index: 9;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%) rotate(45deg);
+  transform: translate(-50%, 0%) rotate(45deg);
+  -webkit-animation: fade_move_down 4s ease-in-out infinite;
+  animation: fade_move_down 4s ease-in-out infinite;
+}
+
+@-webkit-keyframes fade_move_down {
+  0% {
+    -webkit-transform: translate(0, -10px) rotate(45deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(0, 10px) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+@keyframes fade_move_down {
+  0% {
+    -webkit-transform: translate(0, -10px) rotate(45deg);
+            transform: translate(0, -10px) rotate(45deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(0, 10px) rotate(45deg);
+            transform: translate(0, 10px) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+main .gameplay {
+  background-color: #00062f;
+  margin: 0px;
+}
+
+main .gameplay .gameplay-content {
+  max-width: 1140px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .gameplay .gameplay-content .gameplay-head {
+  color: white;
+  font-size: 3rem;
+  font-family: var(--montserrat);
+}
+
+main .gameplay .gameplay-content .embed {
+  border: 2px solid white;
+  padding: 5px;
+}
+
+main .gameplay .gameplay-content .subtitle {
+  color: white;
+}
+
+main .gameplay .gameplay-content .subtitle a {
+  color: #00aeff;
+}
+
+main .gameplay .gameplay-content .subtitle a:hover {
+  text-decoration: underline;
+}
+
+main .weapons {
+  background-color: #00062f;
+  margin: 0px;
+}
+
+main .weapons .weapons-content {
+  max-width: 1140px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .weapons .weapons-content .weapons-head {
+  color: white;
+  font-size: 3rem;
+  font-family: var(--montserrat);
+}
+
+main .weapons .weapons-content .weapons-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+main .weapons .weapons-content .weapons-grid .weapon {
+  width: 300px;
+  height: 200px;
+  background-color: white;
+  margin: 2rem;
+  border: 2px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  outline: 2px solid white;
+  outline-offset: 4px;
+}
+
+main .vehicles {
+  background-color: #00062f;
+  margin: 0px;
+}
+
+main .vehicles .vehicles-content {
+  max-width: 1140px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .vehicles .vehicles-content .vehicles-head {
+  color: white;
+  font-family: var(--montserrat);
+  font-size: 3rem;
+}
+
+main .vehicles .vehicles-content .vehicles-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+main .vehicles .vehicles-content .vehicles-grid .vehicle {
+  width: 300px;
+  height: 200px;
+  background-color: white;
+  margin: 2rem;
+  border: 2px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  outline: 2px solid white;
+  outline-offset: 4px;
+}
+
+main .vehicles .vehicles-content .vehicles-grid .vehicle img {
+  width: 300px;
+  height: 200px;
+}
+
+main .info {
+  background-color: #00062f;
+  margin: 0px;
+}
+
+main .info .info-content {
+  color: #eff3ff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3rem;
+  font-family: "Do Hyeon", sans-serif;
+}
+
+main .info .info-content .section1 {
+  margin: 2rem;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+main .info .info-content .section2 {
+  margin: 2rem;
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+
+main .info .info-content .section2 span {
+  color: #cd181d;
+}
+
+main .info .info-content .section3 {
+  margin-bottom: 3rem;
+}
+
+main .info .info-content .section3 a {
+  text-decoration: none;
+  color: #eff3ff;
+}
+
+main .info .info-content .section3 a i {
+  font-size: 4rem;
+  margin: 0 1rem;
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+}
+
+main .info .info-content .section3 a i:hover {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+
+@media only screen and (max-width: 960px) {
+  main .info .info-content .section1 {
+    font-size: 1.6rem;
+  }
+  main .info .info-content .section2 {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+  main .info .info-content .section3 a i {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  main .landing .landing-content .buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 350px;
+  }
+  main .landing .landing-content .buttons .demo,
+  main .landing .landing-content .buttons .pre-order {
+    margin: 2rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  header .nav {
+    padding-top: 1rem;
+    background-color: #00062f;
+  }
+  header .nav .nav-menu {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header .nav .nav-menu .nav-brand {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-left: 20px;
+  }
+  header .nav .nav-menu .toggle-collapse {
+    display: initial;
+  }
+  header .nav .nav-menu .nav-items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .landing .landing-content .heading h1 {
+    margin-top: 5rem;
+    font-size: 6rem;
+  }
+}
+
+@media only screen and (max-width: 663px) {
+  main .info .info-content .section3 a {
+    margin: 1rem;
+  }
+  main .info .info-content .section3 a i {
+    margin: 1rem;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  main .landing .landing-content .heading {
+    text-align: center;
+  }
+  main .landing .landing-content .heading h1 {
+    margin: 7rem 0 3rem 0;
+  }
+  main .landing .landing-content .scroll-down {
+    margin: 2rem 0;
+  }
+}
+/*# sourceMappingURL=shadow_runner.css.map */
